@@ -1,160 +1,177 @@
 /* @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css); */
 
-fieldset, label { margin: 0; padding: 0; }
-body{ margin: 20px; }
+fieldset,
+label {
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    margin: 20px;
+}
 
 /****** Style Star Rating Widget *****/
 
-
-
-.rating > input { display: none; } 
-.rating > label:before { 
-  margin: 5px;
-  font-size: 2.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
+.rating>input {
+    display: none;
 }
 
-.rating > .half:before { 
-  content: "\f089";
-  position: absolute;
+.rating>label:before {
+    margin: 5px;
+    font-size: 2.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
 }
 
-.rating > label { 
-  color: #ddd; 
- float: right; 
+.rating>.half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating>label {
+    color: #ddd;
+    float: right;
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/
 
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating>input:checked~label,
+/* show gold star when clicked */
 
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+.rating:not(:checked)>label:hover,
+/* hover current star */
 
+.rating:not(:checked)>label:hover~label {
+    color: #FFD700;
+}
 
-.imageBackG{
+/* hover previous stars in list */
+
+.rating>input:checked+label:hover,
+/* hover current star when changing rating */
+
+.rating>input:checked~label:hover,
+.rating>label:hover~input:checked~label,
+/* lighten current selection */
+
+.rating>input:checked~label:hover~label {
+    color: #FFED85;
+}
+
+.imageBackG {
     background: url('http://sfat-haprahim.co.il/wp-content/uploads/2017/08/%D7%96%D7%A8-%D7%A4%D7%A8%D7%97%D7%99%D7%9D-%D7%9E%D7%A1-29-1.jpeg') no-repeat center;
     background-size: cover;
-    height:500px;
+    height: 550px;
     /*! width: 700px; */
-/*   position: relative; */
-
+    /*       position: relative; */
 }
 
-.rating { 
-  border: none;
-margin-right: 80px;
-margin-top: 70px;
-/*   float: left; */
-/* margin:  100px 100px 100px 650px; */
+.all {
+    padding-right: 280px;
+    right: 220px;
+    top: 70px;
+    position: absolute;
+    color: white;
+    height: 420px;
+    background: #545f75;
+    opacity: 0.97;
+    width: 600px;
 }
 
-.all{
-padding-right: 280px;
-right: 220px;
-position: absolute;
-color: white;
-height: 420px;
-/*   background-color: rgba(0, 0, 0, 0.5); */
-background: #545f75;
-  opacity: 0.97;
- width: 600px;
+.review {
+    background-color: #eaedf2;
+    position: absolute;
+    right: 25px;
+    top: 48px;
+    height: 450px;
+    width: 400px;
+    min-width: 400px;
+    max-width: 400px;
+    text-align: center;
 }
 
-.review{
-background-color:#eaedf2;
- position: absolute; 
- right:25px;
-top:48px; 
-height: 450px;
-width: 400px;
-min-width: 400px;
-max-width: 400px;
-/* text-align: center; */
+.person {
+    border-radius: 50%;
+    width: 80px;
+    margin-top: -30px;
 }
 
-.fa-phone{
-  font-size: 40px;
- transform: scaleX(-1);
-opacity: 0.9;
-padding-right: 20px;
+.rating {
+    border: none;
+    margin-top: 15px;
+    width: 310px;
 }
-.pink{
-  background-color: #f74160;
-height: 225px;
-width: 400px;
-position: absolute;
-bottom: 0px;
+
+.yourReview {
+    width: 320px;
+    /*     height: 160px; */
+    padding-bottom: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-top: 30px;
+    margin-bottom: -100px;
+    min-height: 110px;
+    max-height: 120px;
+    max-width: 360px;
+    min-width: 340px;
 }
-.send{
-font-size: 25px;
-/* margin: 100px; */
-position: absolute;
-bottom: 40px;
- background-color: #f74160;
-border: none;
-color: white;
-font-family: arial;
-left: 80px;
-text-decoration: none;
+
+.yourReview::-moz-placeholder {
+    /*     top: 0; */
+    /*     position: absolute; */
+    font-size: 20px;
+    font-style: italic;
+}
+
+.pink {
+    background-color: #f74160;
+    height: 210px;
+    width: 400px;
+}
+
+.send {
+    font-size: 25px;
+    /*     margin: 100px; */
+    position: absolute;
+    bottom: 5px;
+    background-color: #f74160;
+    border: none;
+    color: white;
+    font-family: arial;
+    left: 90px;
+    text-decoration: none;
     text-transform: uppercase;
 }
 
-.yourReview{
-  width: 300px;
-/*! height: 150px; */
-position: absolute;
-  margin-left: 50px;
-  top: -90px;
-padding-left: 10px;
-padding-top: 10px;
-  padding-bottom: 150px;
+.leftDetail {
+    padding-left: 50px;
+    padding-top: 50px;
+    font-family: arial;
 }
-.yourReview::-moz-placeholder{
-  /*! top: 0; */
-  /*! position: absolute; */
-  font-size: 20px;
- font-style: italic;
+
+p {
+    font-size: 18px;
+    opacity: 0.6;
 }
-.person{
-  border-radius: 50%;
-width: 80px;
-position: absolute;
-left: 170px;
-top:-30px;
-text-align: center;
-}
-.leftDetail{
-  padding-left: 50px;
-padding-top: 50px;
-font-family: arial;
-}
-p{
-  font-size: 18px;
-opacity: 0.6;
-}
+
 /* 
 .leftBtn{
  position: relative;
   top:-25px;
 } */
-span{
-  font-size: 45px;
-opacity: 0.9;
-padding-left: 30px;
+
+span {
+    font-size: 45px;
+    opacity: 0.9;
+    padding-left: 30px;
 }
-.fa-arrow-left{
-  font-size: 35px;
-  color: #f74160;
-opacity: 0.9;
-/* cursor: pointer; */
+
+.fa-arrow-left {
+    font-size: 35px;
+    color: #f74160;
+    opacity: 0.9;
+    /* cursor: pointer; */
 }
 
 /* 
@@ -165,7 +182,14 @@ margin-bottom:  -20px;
 }
  */
 
-.fa-paper-plane{
-  font-size: 35px;
-transform: rotate(20deg);
+.fa-paper-plane {
+    font-size: 35px;
+    transform: rotate(20deg);
+}
+
+.fa-phone {
+    font-size: 40px;
+    transform: scaleX(-1);
+    opacity: 0.9;
+    padding-right: 20px;
 }
