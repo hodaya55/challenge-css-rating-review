@@ -61,22 +61,27 @@ body {
 
 .imageBackG {
     background: url('http://sfat-haprahim.co.il/wp-content/uploads/2017/08/%D7%96%D7%A8-%D7%A4%D7%A8%D7%97%D7%99%D7%9D-%D7%9E%D7%A1-29-1.jpeg') no-repeat center;
-    background-size: cover;
-    height: 550px;
+    /*! background-size: cover; */
+    height: 570px;
     /*! width: 700px; */
-    /*       position: relative; */
+    /* text-align: center; */
+    /*! margin: auto; */
+    /*! position: relative; */
+    /*! display: block; */
 }
 
 .all {
     padding-right: 280px;
-    right: 220px;
-    top: 70px;
-    position: absolute;
+    /* right: 220px; */
+    /* top: 70px; */
     color: white;
     height: 420px;
     background: #545f75;
     opacity: 0.97;
     width: 600px;
+    position: relative;
+    display: block;
+    margin: auto;
 }
 
 .review {
@@ -153,6 +158,7 @@ body {
 p {
     font-size: 18px;
     opacity: 0.6;
+    width: 300px;
 }
 
 /* 
